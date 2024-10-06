@@ -11,7 +11,22 @@ sed -i "/etc/makepkg.conf" \
     -e "s|^#RUSTFLAGS=.*|&\nRUSTFLAGS=\"-C opt-level=2 -C target-cpu=native\"|" \
     -e "s|^#MAKEFLAGS=.*|&\nMAKEFLAGS=\"-j$(($(nproc --all)-1))\"|"
 
-pacman -S git base-devel
-
-# cleanup package cache periodically
+# The package cache can be cleaned periodically using the systemd timer paccache.timer.
+# If the timer is enabled the cache will be cleaned weekly with paccache’s default options.
 systemctl enable --now paccache.timer
+
+# utilities
+pacman -S git base-devel nano htop alacritty
+
+# gui
+pacman -S xorg-server i3-wm dmenu i3status 
+
+# 4090 drivers
+cd ~/repos
+git clone https://github.com/Frogging-Family/nvidia-all.git
+cd nvidia-all
+makepkg -si
+
+# gui utils
+pacman -S firefox feh nvtop nvidia-utils
+yay -S google-chrome
