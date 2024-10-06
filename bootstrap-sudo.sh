@@ -19,7 +19,7 @@ systemctl enable --now paccache.timer
 pacman -S git base-devel nano htop alacritty
 
 # gui
-pacman -S xorg-server i3-wm dmenu i3status 
+pacman -S xorg-server i3-wm dmenu i3status xorg-xrandr
 
 # 4090 drivers
 cd ~/repos
