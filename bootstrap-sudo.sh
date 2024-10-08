@@ -16,10 +16,10 @@ sed -i "/etc/makepkg.conf" \
 systemctl enable --now paccache.timer
 
 # utilities
-pacman -S git base-devel nano htop alacritty
+pacman -S git base-devel nano htop traceroute dnsutils alacritty ffmpeg
 
 # gui
-pacman -S xorg-server i3-wm dmenu i3status xorg-xrandr
+pacman -S xorg-server i3-wm dmenu i3status xorg-xrandr nautilus lutris
 
 # 4090 drivers
 cd ~/repos
