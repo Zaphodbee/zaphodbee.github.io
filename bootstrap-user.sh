@@ -5,7 +5,7 @@ mkdir ~/repos
 cd ~/repos
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
-yay -S google-chrome legendary flameshot
+yay -S google-chrome legendary
 
 
 
