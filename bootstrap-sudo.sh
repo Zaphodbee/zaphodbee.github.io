@@ -16,7 +16,7 @@ sed -i "/etc/makepkg.conf" \
 systemctl enable --now paccache.timer
 
 # utilities
-pacman -S git base-devel nano htop traceroute dnsutils alacritty ffmpeg
+pacman -S git base-devel nano htop btop traceroute dnsutils alacritty ffmpeg
 
 # gui
 pacman -S xorg-server i3-wm dmenu i3status xorg-xrandr nautilus lutris
@@ -28,5 +28,8 @@ cd nvidia-all
 makepkg -si
 
 # gui utils
-pacman -S firefox feh nvtop nvidia-utils
+pacman -S firefox feh nvtop nvidia-utils flameshot mplayer vlc
 yay -S google-chrome
+
+# dev tools
+pacman -S code
