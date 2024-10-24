@@ -33,3 +33,6 @@ yay -S google-chrome
 
 # dev tools
 pacman -S code
+
+# set DNS servers in resolv and then lock file using this command
+chattr +i /etc/resolv.conf
