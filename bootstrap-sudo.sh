@@ -19,7 +19,7 @@ systemctl enable --now paccache.timer
 pacman -S git base-devel nano htop btop traceroute dnsutils alacritty ffmpeg
 
 # gui
-pacman -S xorg-server i3-wm dmenu i3status xorg-xrandr nautilus lutris
+pacman -S xorg-server xorg-xinit i3-wm dmenu i3status xorg-xrandr nautilus lutris
 
 # 4090 drivers
 cd ~/repos
