@@ -18,6 +18,9 @@ systemctl enable --now paccache.timer
 # utilities
 pacman -S git base-devel nano htop btop traceroute dnsutils alacritty ffmpeg
 
+# bluetooth
+pacman -S gnome-bluetooth-3.0 gnome-shell
+
 # gui
 pacman -S xorg-server xorg-xinit i3-wm dmenu i3status xorg-xrandr nautilus lutris
 
